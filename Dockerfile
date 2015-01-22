@@ -14,6 +14,7 @@ ENV GO_START_SERVER_VERSION 0.0.2
 RUN curl -L https://github.com/lestrrat/go-server-starter/releases/download/$GO_START_SERVER_VERSION/start_server_linux_amd64.tar.gz | tar zxv -C /usr/local/bin --strip=1  --wildcards '*/start_server' --no-same-owner --no-same-permissions
 
 # h2o
+ENV H2O_VERSION 20150122
 RUN git clone https://github.com/h2o/h2o \
   && cd h2o \
   && git submodule update --init --recursive \
